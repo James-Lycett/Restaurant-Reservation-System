@@ -9,6 +9,7 @@ import SeatReservations from "../reservations/SeatReservations";
 import EditReservation from "../reservations/EditReservation";
 import Search from "../search/Search";
 import EditTable from "../tables/EditTable";
+import Instructions from "../Instructions/Instructions";
 
 
 /**
@@ -47,6 +48,9 @@ function Routes() {
       </Route>
       <Route path="/search" >
         <Search />
+      </Route>
+      <Route path="/instructions">
+        <Instructions />
       </Route>
       <Route>
         <NotFound />

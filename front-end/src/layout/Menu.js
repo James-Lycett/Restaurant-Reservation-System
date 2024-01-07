@@ -46,6 +46,12 @@ function Menu() {
               &nbsp;New Table
             </Link>
           </li>
+          <li>
+            <Link className="nav-link" to="/instructions">
+              <span className="bi bi-patch-question" />
+                &nbsp;Instructions
+            </Link>
+          </li>
         </ul>
         <div className="text-center d-none d-md-inline">
           <button
