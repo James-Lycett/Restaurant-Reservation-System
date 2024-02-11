@@ -217,7 +217,7 @@ describe("US-04 - Seat reservation", () => {
         expect(tableOne).not.toBeUndefined();
 
         const data = {
-          reservation_id: 999,
+          reservation_id: 9999,
         };
 
         const response = await request(app)
@@ -225,7 +225,7 @@ describe("US-04 - Seat reservation", () => {
           .set("Accept", "application/json")
           .send({ data });
 
-        expect(response.body.error).toContain("999");
+        expect(response.body.error).toContain("9999");
         expect(response.status).toBe(404);
       });
 

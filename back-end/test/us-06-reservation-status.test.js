@@ -85,11 +85,11 @@ describe("US-06 - Reservation status", () => {
 
     test("returns 404 for non-existent reservation_id", async () => {
       const response = await request(app)
-        .put("/reservations/99/status")
+        .put("/reservations/9999/status")
         .set("Accept", "application/json")
         .send({ data: { status: "seated" } });
 
-      expect(response.body.error).toContain("99");
+      expect(response.body.error).toContain("9999");
       expect(response.status).toBe(404);
     });
 
