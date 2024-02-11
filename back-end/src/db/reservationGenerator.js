@@ -5,7 +5,7 @@ function randomNameGenerator() {
             {
                 first: "Rick",
                 last: "Sanchez",
-                tel: "202-555-0164",
+                tel: "510-555-0164",
             },
             {
                 first: "Frank",
@@ -15,12 +15,12 @@ function randomNameGenerator() {
             {
                 first: "Bird",
                 last: "Person",
-                tel: "808-555-0141",
+                tel: "408-555-0141",
             },
             {
                 first: "Tiger",
                 last: "Lion",
-                tel: "808-555-0140",
+                tel: "831-555-0140",
             },
             {
                 first: "Summer",
@@ -30,7 +30,7 @@ function randomNameGenerator() {
             {
                 first: "Sleepy",
                 last: "Gary",
-                tel: "202-555-0153",
+                tel: "925-555-0153",
             },
             {
                 first: "Cornvelius",
@@ -40,7 +40,7 @@ function randomNameGenerator() {
             {
                 first: "Morty",
                 last: "Smith",
-                tel: "818-555-5298",
+                tel: "650-555-5298",
             },
             {
                 first: "Squanchy",
@@ -55,7 +55,7 @@ function randomNameGenerator() {
             {
                 first: "Shrimbly",
                 last: "Pibbles",
-                tel: "504-555-2098",
+                tel: "415-555-2098",
             },
             {
                 first: "Zeep",
