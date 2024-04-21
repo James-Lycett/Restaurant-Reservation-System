@@ -1,8 +1,13 @@
-import { formatAsTime } from "./date-time";
+import { formatAsTime, formatAsTimeSingle } from "./date-time";
 
 
 function formatTime(reservation) {
   reservation.reservation_time = formatAsTime(reservation.reservation_time);
+  return reservation;
+}
+
+function formatTimeSingle(reservation) {
+  reservation.reservation_time = formatAsTimeSingle(reservation.reservation_time);
   return reservation;
 }
 
@@ -16,5 +21,5 @@ function formatTime(reservation) {
 export default function formatReservationTime(reservations) {
   return Array.isArray(reservations)
     ? reservations.map(formatTime)
-    : formatTime(reservations);
+    : formatTimeSingle(reservations);
 }

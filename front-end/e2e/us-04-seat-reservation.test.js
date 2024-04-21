@@ -177,7 +177,7 @@ describe("US-04 - Seat reservation - E2E", () => {
         fullPage: true,
       });
 
-      await selectOptionByText(page, "table_id", "#1 - 6");
+      await selectOptionByText(page, "table_id", "#1 - Capacity: 6");
 
       await page.screenshot({
         path: ".screenshots/us-04-seat-reservation-submit-before.png",
@@ -206,7 +206,7 @@ describe("US-04 - Seat reservation - E2E", () => {
           fullPage: true,
         });
 
-        await selectOptionByText(page, "table_id", "Bar #1 - 1");
+        await selectOptionByText(page, "table_id", "Bar #1 - Capacity: 1");
 
         await page.screenshot({
           path: ".screenshots/us-04-seat-capacity-reservation-submit-before.png",

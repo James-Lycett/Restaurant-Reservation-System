@@ -49,11 +49,13 @@ describe("US-03 - Create reservation on a future, working date - E2E", () => {
 
       await page.click("button[type=submit]");
 
+      await page.waitForTimeout(1000);
+
       await page.screenshot({
         path: ".screenshots/us-02-reservation-too-early-after.png",
       });
 
-      expect(await page.$(".alert-danger")).toBeTruthy();
+      expect(await page.$("input[name=reservation_time]:invalid")).toBeTruthy();
     });
 
     test("displays an error message if reservation time is too close to close time", async () => {
@@ -68,11 +70,13 @@ describe("US-03 - Create reservation on a future, working date - E2E", () => {
 
       await page.click("button[type=submit]");
 
+      await page.waitForTimeout(1000);
+
       await page.screenshot({
         path: ".screenshots/us-02-reservation-almost-closing-after.png",
       });
 
-      expect(await page.$(".alert-danger")).toBeTruthy();
+      expect(await page.$("input[name=reservation_time]:invalid")).toBeTruthy();
     });
 
     test("displays an error message if reservation time is after the close time", async () => {
@@ -87,11 +91,13 @@ describe("US-03 - Create reservation on a future, working date - E2E", () => {
 
       await page.click("button[type=submit]");
 
+      await page.waitForTimeout(1000);
+
       await page.screenshot({
         path: ".screenshots/us-02-reservation-too-late-after.png",
       });
 
-      expect(await page.$(".alert-danger")).toBeTruthy();
+      expect(await page.$("input[name=reservation_time]:invalid")).toBeTruthy();
     });
   });
 });

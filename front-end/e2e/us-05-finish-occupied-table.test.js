@@ -71,7 +71,7 @@ describe("US-05 - Finish an occupied table - E2E", () => {
       expect(containsOccupied).toBe(true);
 
       const finishButtonSelector = `[data-table-id-finish="${table.table_id}"]`;
-      await page.waitForSelector(finishButtonSelector);
+      await page.waitForSelector(finishButtonSelector, { visible: true, timeout: 5000, clickable: true });
 
       page.on("dialog", async (dialog) => {
         expect(dialog.message()).toContain(
@@ -115,7 +115,7 @@ describe("US-05 - Finish an occupied table - E2E", () => {
       expect(containsOccupied).toBe(true);
 
       const finishButtonSelector = `[data-table-id-finish="${table.table_id}"]`;
-      await page.waitForSelector(finishButtonSelector);
+      await page.waitForSelector(finishButtonSelector, { visible: true, timeout: 5000 });
 
       page.on("dialog", async (dialog) => {
         expect(dialog.message()).toContain(
@@ -123,6 +123,8 @@ describe("US-05 - Finish an occupied table - E2E", () => {
         );
         await dialog.dismiss();
       });
+
+      await page.waitForSelector(finishButtonSelector, { visible: true, timeout: 5000 })
 
       await page.click(finishButtonSelector);
 

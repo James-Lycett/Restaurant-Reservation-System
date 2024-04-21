@@ -29,7 +29,7 @@ function ReservationCard({ reservation, setReservationsError, loadDashboard, dat
         }
     }
 
-    if (status === "booked") {
+    if (status === "booked" || status === "seated") {
         return (
             <>
             <li className="mt-3">

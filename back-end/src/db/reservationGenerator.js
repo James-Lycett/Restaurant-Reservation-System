@@ -75,6 +75,8 @@ function randomNameGenerator() {
 }
 
 function generator(n) {
+
+    // Reservations array pre-loaded with the reservations necessary to pass tests
     let reservations = [
             {
               first_name: "Rick",
@@ -147,9 +149,12 @@ function generator(n) {
 
 
     for (let i = 0; i < n; i++) {
+        // Randomly select 'name' object from a list to use in generated reservations
         const randomName1 = randomNameGenerator()
         const randomName2 = randomNameGenerator()
         const randomName3 = randomNameGenerator()
+
+        // Used to increment the date by one day
         const tomorrow = moment(currentDate).add(1, 'days')
         const formattedTomorrow = moment(tomorrow).format("YYYY-MM-DD")
 

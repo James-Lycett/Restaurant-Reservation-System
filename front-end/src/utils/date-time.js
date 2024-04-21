@@ -32,6 +32,11 @@ export function formatAsDate(dateString) {
   return momentDate
 }
 
+export function formatAsDateSingle(dateString) {
+  const formattedDate = dateString.match(dateFormat)[0];
+  return formattedDate
+}
+
 /**
  * Format a time string in HH:MM:SS format (which is what is returned from PostgreSQL) as HH:MM.
  * @param timeString
@@ -43,6 +48,11 @@ export function formatAsTime(timeString) {
   const regTime = timeString.match(timeFormat)[0]
   const momentTime = moment(regTime, "HH:mm:ss").format("h:mma")
   return momentTime
+}
+
+export function formatAsTimeSingle(timeString) {
+  const formattedTime = timeString.match(timeFormat)[0]
+  return formattedTime
 }
 /**
  * Today's date as YYYY-MM-DD.

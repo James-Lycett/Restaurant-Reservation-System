@@ -1,7 +1,12 @@
-import { formatAsDate } from "./date-time";
+import { formatAsDate, formatAsDateSingle } from "./date-time";
 
 function formatDate(reservation) {
   reservation.reservation_date = formatAsDate(reservation.reservation_date);
+  return reservation;
+}
+
+function formatSingleDate(reservation) {
+  reservation.reservation_date = formatAsDateSingle(reservation.reservation_date);
   return reservation;
 }
 
@@ -15,5 +20,5 @@ function formatDate(reservation) {
 export default function formatReservationDate(reservations) {
   return Array.isArray(reservations)
     ? reservations.map(formatDate)
-    : formatDate(reservations);
+    : formatSingleDate(reservations);
 }
