@@ -120,7 +120,7 @@ function Dashboard() {
     </main>
   )
   } else {
-    return <h3>Loading Date...</h3>
+    return <h3>Loading... because I'm cheap the server spins down after a period of inactivity - give it a minute and refresh the page.</h3>
   }
 }
 

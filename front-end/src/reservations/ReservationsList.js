@@ -4,7 +4,12 @@ import ReservationCard from "./ReservationCard";
 function ReservationsList({ reservations, setReservationsError, loadDashboard, dateDisplay}) {
     // Waits for reservations to load from API before rendering reservation list
     if (reservations.length === 0) {
-        return <h6>No reservations found.</h6>
+        return (
+            <>
+            <h6>No reservations found.</h6>
+            <p>Server spins down after a period of inactivity in order to save me money. If you don't see anything here give it a minute and reload the page.</p>
+            </>
+        )
     } else {
         return (
             
