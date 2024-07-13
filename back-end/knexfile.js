@@ -9,17 +9,17 @@ const path = require("path");
 
 const {
   DATABASE_URL = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_DEVELOPMENT = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_TEST = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_PREVIEW = "postgresql://postgres@localhost/postgres",
   DEBUG,
 } = process.env;
 
 module.exports = {
   development: {
-    client: "postgresql",
+    client: "pg",
     pool: { min: 1, max: 5 },
-    connection: DATABASE_URL_DEVELOPMENT,
+    connection: {
+        connectionString: DATABASE_URL,
+        ssl: true
+    },
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
     },
@@ -29,9 +29,12 @@ module.exports = {
     debug: !!DEBUG,
   },
   test: {
-    client: "postgresql",
+    client: "pg",
     pool: { min: 1, max: 5 },
-    connection: DATABASE_URL_TEST,
+    connection: {
+        connectionString: DATABASE_URL,
+        ssl: true
+    },
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
     },
@@ -41,9 +44,12 @@ module.exports = {
     debug: !!DEBUG,
   },
   preview: {
-    client: "postgresql",
+    client: "pg",
     pool: { min: 1, max: 5 },
-    connection: DATABASE_URL_PREVIEW,
+    connection: {
+        connectionString: DATABASE_URL,
+        ssl: true
+    },
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
     },
@@ -53,9 +59,12 @@ module.exports = {
     debug: !!DEBUG,
   },
   production: {
-    client: "postgresql",
+    client: "pg",
     pool: { min: 1, max: 5 },
-    connection: DATABASE_URL,
+    connection: {
+        connectionString: DATABASE_URL,
+        ssl: true
+    },
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
     },
