@@ -1,9 +1,9 @@
 import React from "react";
 import ReservationCard from "./ReservationCard";
 
-function ReservationsList({ reservations, setReservationsError, loadDashboard, dateDisplay}) {
+function ReservationsList({ reservations, setReservationsError, loadDashboard, dateDisplay, search}) {
     // Waits for reservations to load from API before rendering reservation list
-    if (reservations.length === 0) {
+    if (reservations.length === 0 && !search) {
         return (
             <>
             <h6>No reservations found.</h6>

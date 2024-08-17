@@ -62,7 +62,7 @@ function Search() {
             <ErrorAlert error={error} />
         </div>
         <div className="mt-3">
-            <ReservationsList reservations={reservations} setReservationsError={setError} loadDashboard={loadReservations} dateDisplay={true}/>
+            <ReservationsList reservations={reservations} setReservationsError={setError} loadDashboard={loadReservations} dateDisplay={true} search={true}/>
         </div>
         </>
     )
