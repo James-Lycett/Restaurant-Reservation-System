@@ -49,7 +49,7 @@ function Menu() {
           <li>
             <Link className="nav-link" to="/instructions">
               <span className="bi bi-patch-question" />
-                &nbsp;Instructions
+                &nbsp;How To
             </Link>
           </li>
         </ul>
