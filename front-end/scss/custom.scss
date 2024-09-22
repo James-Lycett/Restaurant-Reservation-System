@@ -1,0 +1,26 @@
+// Use 
+// npx sass scss/custom.scss public/css/custom.css --watch
+// while actively editing this file to compile real-time
+
+
+
+$primary: #108A00;
+$secondary: #108A00;
+$body-bg: #000000;
+$body-color: #FFFFFF;
+$card-border-color: #333333;
+$bg-dark: #000000;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary
+  ),
+  $theme-colors
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
